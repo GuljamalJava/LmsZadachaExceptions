@@ -63,9 +63,9 @@ public class Main {
 
                     if (height < 0 && length < 0 && width < 0) {
 
-                        throw new ArithmeticException("Berilgen san ters san!");
+                        throw new IllegalArgumentException ("Berilgen san ters san!");
                     }
-                } catch (ArithmeticException e) {
+                } catch (IllegalArgumentException e) {
                     System.out.println(e.getMessage());
                     System.out.println("Ters san beruugo bolboit!");
                 } catch (InputMismatchException e) {
@@ -87,7 +87,7 @@ public class Main {
                  System.out.println("Cylinder kolomu: ");
                  System.out.println(cylinder.getVolumeCylender(radius,height));
 
-             } catch (ArithmeticException e) {
+             } catch (IllegalArgumentException e) {
                  System.out.println(e.getMessage());
                  System.out.println("Ters san beruugo bolboit!");
              } catch (InputMismatchException e){
